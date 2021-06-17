@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MainActivity"
+    android:background="@color/neutral_background"
+    >
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city_is_not_chosen"
+        android:textSize="20sp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_change_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rounded_corner"
+        android:text="@string/change_city"
+        android:textSize="18sp"
+        android:layout_marginRight="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_change_coords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvForecast"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+    <Button
+        android:id="@+id/btn_change_coords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:textSize="18sp"
+        android:background="@drawable/btn_rounded_corner"
+        android:text="@string/change_coords"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/detailed_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailed_about_chosen_day"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvForecast" />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:text="Temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_header" />
+
+    <TextView
+        android:id="@+id/tvFeels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Feels like"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTemperature" />
+
+    <TextView
+        android:id="@+id/tvMorning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Morning"
+        style="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toStartOf="@+id/tvEvening"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_header" />
+
+    <TextView
+        android:id="@+id/tvEvening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:text="Evening"
+        style="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toStartOf="@+id/tvNight"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_header" />
+
+    <TextView
+        android:id="@+id/tvNight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="33dp"
+        android:text="Night"
+        style="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailed_header" />
+
+    <TextView
+        android:id="@+id/tvMornTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/tvTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/tvMorning" />
+
+    <TextView
+        android:id="@+id/tvEveTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/tvMornTemp"
+        app:layout_constraintTop_toBottomOf="@+id/tvEvening" />
+
+    <TextView
+        android:id="@+id/tvNigTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/tvEveTemp"
+        app:layout_constraintTop_toBottomOf="@+id/tvNight" />
+
+    <TextView
+        android:id="@+id/tvMornFeel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/tvFeels"
+        app:layout_constraintTop_toBottomOf="@+id/tvMornTemp" />
+
+    <TextView
+        android:id="@+id/tvEveFeel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/tvMornFeel"
+        app:layout_constraintTop_toBottomOf="@+id/tvEveTemp" />
+
+    <TextView
+        android:id="@+id/tvNigFeel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/tvEveFeel"
+        app:layout_constraintTop_toBottomOf="@+id/tvNigTemp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

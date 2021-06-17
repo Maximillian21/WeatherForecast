@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="change_city">Change city</string>
+    <string name="confirm">Confirm</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="change_coords">Change coords</string>
+    <string name="cesium">°C</string>
+    <string name="detailed_about_chosen_day">Detailed about chosen day</string>
+    <string name="city_is_not_chosen">City is not chosen</string>
+</resources>
